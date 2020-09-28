@@ -2,24 +2,21 @@ package com.company;
 
 import java.util.ArrayList;
 
+//A Student object will contain the answer(s) selected and an id fo rthe student
 public class Student {
     private long id;
     private ArrayList<String> selectedAnswer;
-    private boolean hasAnswered;
 
     public Student()
     {
         id = 0;
         selectedAnswer = new ArrayList<>();
-        hasAnswered = false;
     }
 
     public Student(long id, ArrayList<String> selectedAnswer)
     {
         this.id = id;
         this.selectedAnswer = selectedAnswer;
-        hasAnswered = true;
-
     }
 
     public Student(long id) {
@@ -45,15 +42,7 @@ public class Student {
         }
     }
 
-    public void setHasAnswered(boolean val)
-    {
-        hasAnswered = val;
-    }
-
-    public boolean isHasAnswered() {
-        return hasAnswered;
-    }
-
+    //This will clear all the answers the student selected
     public void clearSelectiveAnswer()
     {
         selectedAnswer.clear();

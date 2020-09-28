@@ -2,6 +2,7 @@ package com.company;
 
 import java.util.ArrayList;
 
+//This question can accept more than one answers from a student
 public class MultipleChoiceQuestion implements Question {
 
     private String question;

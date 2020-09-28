@@ -3,6 +3,7 @@ package com.company;
 import java.util.ArrayList;
 import java.util.Hashtable;
 
+//This class calculate the vote and output the result
 public class VotingService {
     private String questionType;
     private ArrayList<String> answers;
@@ -16,9 +17,11 @@ public class VotingService {
         this.question = question;
     }
 
-
+    //This method will count the number of student voted for each candidate answers
     public void submit(ArrayList<Student> s){
         if(questionType.equals("Multiple Choice")) {
+
+            //initialize array, so later instead of add we can use set
             freq.add(0);
             freq.add(0);
             freq.add(0);
@@ -39,6 +42,7 @@ public class VotingService {
                         d++;
                 }
             }
+            //Using set, when student resubmit, changes will be added
             freq.set(0,a);
             freq.set(1,b);
             freq.set(2,c);
@@ -47,6 +51,7 @@ public class VotingService {
 
         if(questionType.equals("Single Choice"))
         {
+            //initialize array, so later instead of add we can use set
             freq.add(0);
             freq.add(0);
             int t=0, f=0;
@@ -61,11 +66,13 @@ public class VotingService {
                         f++;
                 }
             }
+            //Using set, when student resubmit, changes will be added
             freq.set(0,t);
             freq.set(1,f);
         }
     }
 
+    //Print out the result/headcount for each candidate answers
     public void printStat()
     {
        for (int i = 0; i < answers.size(); i++) //get Student

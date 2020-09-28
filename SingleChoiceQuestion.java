@@ -2,6 +2,7 @@ package com.company;
 
 import java.util.ArrayList;
 
+//This question will only accept one answer from student
 public class SingleChoiceQuestion implements Question {
 
     private String question;
